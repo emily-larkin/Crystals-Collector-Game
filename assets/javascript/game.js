@@ -21,9 +21,6 @@ var crystalValue4 = Math.floor(Math.random() * 12) + 1;
 var goalScore = Math.floor(Math.random() * 101) + 19;
 console.log(goalScore);
 
-var goalScoreText = document.getElementById("goal-score");
-goalScoreText.textContent = "Goal Score: " + goalScore;
-
 // when the crystals are clicked, it adds their value to the users score
 function crystal1() {
     console.log(crystalValue1);
@@ -50,20 +47,29 @@ function crystal4() {
 }
 
 // if the user meets the goalScore, the user wins
-if (goalScore === totalScore) {
+if (totalScore === goalScore) {
     wins++;
+    alert("You win!");
 }
+
+// if the user goes above the goalScore, the user loses 
+else if (totalScore >= goalScore) {
+    losses++;
+    alert("You lose!");
+}
+
+var totalScoreText = document.getElementById("score-text")
+totalScoreText.textContent = "Your total score is: " + totalScore;
+
+var goalScoreText = document.getElementById("goal-score");
+goalScoreText.textContent = "Goal Score: " + goalScore;
 
 var winsText = document.getElementById("wins-text");
 winsText.textContent = "Wins: " + wins;
 
-// if the user goes above the goalScore, the user loses 
-if (goalScore < totalScore) {
-    losses++;
-}
-
 var lossesText = document.getElementById("losses-text");
 lossesText.textContent = "Losses: " + losses;
+
 
 // the game resets if the user wins or loses 
 
