@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Collector Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
+
 <body>
-    <button></button>
+    <div id="heading-text">Crystal Collector!</div>
+    <div id="directions-text">
+        <p>
+            You will be given a random number at the beginning of the game.
+            <br>
+            There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.
+            <br>
+            You win the game by matching your total score to the random number, you lose the game if your total score
+            goes above the random number.
+            <br>
+            The value of each crystal will be hidden until you click on it.
+            <br>
+            Each time the game starts, the game will change the values of each crystal.
+            <br>
+        </p>
+    </div>
+    <div id="crystals">
+        <img id="crystal1" class="crystal-images" src="./assets/images/rock_crystal_on_a_transparent_background__by_prussiaart-dat9yoo.png"
+            alt="Crystal1">
+        <img class="crystal-images" id="crystal2" src="./assets/images/crystal-transparent-1.png" alt="Crystal2">
+        <img class="crystal-images" id="crystal3" src="./assets/images/Diamond-rough.png" alt="Crystal3">
+        <img class="crystal-images" id="crystal4" src="./assets/images/transparent-crystal-background-4.png" alt="Crystal4">
+    </div>
+    <div id="goal-score"></div>
+    <div id="wins-text"></div>
+    <div id="losses-text"></div>
+    <div id="score-text"></div>
 </body>
-<script src="game.js"></script>
+<script src="./assets/javascript/game.js"></script>
+
 </html>

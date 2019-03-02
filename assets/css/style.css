@@ -1,0 +1,13 @@
+.crystal-images {
+    width: 200px;
+    height: 200px;
+}
+
+#crystals {
+    text-align: center;
+}
+
+body {
+    background: #ffe0dd;
+}
+
