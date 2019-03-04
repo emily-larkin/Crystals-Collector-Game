@@ -28,7 +28,6 @@ function resetsCrystals() {
 // creates a random number for the goal for the user between 19 and 120
 function makeGoal() { 
     goalScore = Math.floor(Math.random() * 101) + 19;
-    console.log(goalScore);
 
     var goalScoreText = document.getElementById("goal-score");
     goalScoreText.textContent = "Goal Score: " + goalScore;
