@@ -11,9 +11,9 @@ body {
 }
 
 #directions-text {
-    font-size: 18px;
+    font-size: 19px;
     text-align: center; 
-    line-height: 1.5em;
+    line-height: 1.65em;
 }
 
 .crystal-images {
@@ -38,7 +38,7 @@ body {
 }
 
 #wins-text, #losses-text{
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.5em;
     text-align: center;
 }
