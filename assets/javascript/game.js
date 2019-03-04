@@ -46,38 +46,30 @@ totalScoreText.textContent = "Your total score is: " + totalScore;
 
 // when the crystals are clicked, it adds their value to the users score
 function crystal1() {
-    console.log(crystalValue1);
     totalScore = totalScore + crystalValue1;
-    console.log(totalScore);
     totalScoreText = document.getElementById("score-text");
     totalScoreText.textContent = "Your total score is: " + totalScore;
     checkScore(totalScore);
 }
 
 function crystal2() {
-    console.log(crystalValue2);
     totalScore = totalScore + crystalValue2;
-    console.log(totalScore);
     totalScoreText = document.getElementById("score-text");
     totalScoreText.textContent = "Your total score is: " + totalScore;
     checkScore(totalScore);
 }
 
 function crystal3() {
-    console.log(crystalValue3);
     totalScore = totalScore + crystalValue3;
     totalScoreText = document.getElementById("score-text");
     totalScoreText.textContent = "Your total score is: " + totalScore;
-    console.log(totalScore);
     checkScore(totalScore);
 }
 
 function crystal4() {
-    console.log(crystalValue4);
     totalScore = totalScore + crystalValue4;
     totalScoreText = document.getElementById("score-text");
     totalScoreText.textContent = "Your total score is: " + totalScore;
-    console.log(totalScore);
     checkScore(totalScore);
 }
 
