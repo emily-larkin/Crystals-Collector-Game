@@ -37,10 +37,44 @@ function resetsCrystals() {
 // creates a random number for the goal for the user between 19 and 120
 function makeGoal() {
     goalScore = Math.floor(Math.random() * 101) + 19;
-
     var goalScoreText = document.getElementById("goal-score");
     goalScoreText.textContent = "Goal Score: " + goalScore;
 }
+
+// resets game
+function gameRestart() {
+    totalScore = 0;
+    makeGoal();
+    resetsCrystals();
+}
+
+// the game resets if the user wins or loses 
+// when the game resets, the user will see a new random number that is the goalScore
+// when the game resets, the users score and score counter will reset to 0
+function checkScore(totalScore) {
+    // if the user meets the goalScore, the user wins
+    if (totalScore === goalScore) {
+        wins = wins + 1;
+        alert("You win!");
+        gameRestart();
+    }
+
+    // if the user goes above the goalScore, the user loses 
+    else if (totalScore >= goalScore) {
+        losses = losses + 1;
+        alert("You lose!");
+        gameRestart();
+    }
+
+    winsText;
+    winsText.textContent = "Wins: " + wins;
+
+    lossesText;
+    lossesText.textContent = "Losses: " + losses;
+}
+
+// creates the goalScore
+makeGoal();
 
 // when the crystals are clicked, it adds their value to the users score
 function crystal1() {
@@ -70,36 +104,3 @@ function crystal4() {
     totalScoreText.textContent = "Your total score is: " + totalScore;
     checkScore(totalScore);
 }
-
-// the game resets if the user wins or loses 
-// when the game resets, the user will see a new random number that is the goalScore
-// when the game resets, the users score and score counter will reset to 0
-function checkScore(totalScore) {
-    // if the user meets the goalScore, the user wins
-    if (totalScore === goalScore) {
-        wins++;
-        alert("You win!");
-        gameRestart();
-    }
-
-    // if the user goes above the goalScore, the user loses 
-    else if (totalScore >= goalScore) {
-        losses = losses + 1;
-        alert("You lose!");
-        gameRestart();
-    }
-
-    winsText;
-    winsText.textContent = "Wins: " + wins;
-
-    lossesText;
-    lossesText.textContent = "Losses: " + losses;
-}
-
-function gameRestart() {
-    totalScore = 0;
-    makeGoal();
-    resetsCrystals();
-}
-
-makeGoal();
